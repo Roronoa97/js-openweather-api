@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Roboto", sans-serif;
+        }
+        .input{
+            text-align: center;
+            margin: 100px 0;
+        }
+        input[type="text"]{
+            height: 50px;
+            width: 600px;
+            background: #e7e7e7;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            padding-left: 20px;
+            
+        }
+        input[type="submit"]{
+            height: 50px;
+            width: 100px;
+            background-color: #e7e7e7;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+        input[type="submit"]:hover{
+            background-color: #2e58ee;
+            color: #e7e7e7;
+        }
+        input:focus{
+            outline: none;
+        }
+        .display{
+            width: 700px;
+            height: 500px;
+            background-color: #e7e7e7;
+            margin: 0px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #city{
+            font-size: 40px;
+            margin: 5px;
+        }
+        #temp{
+            font-size: 30px;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        #desc{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <input type="text" id="input-value" placeholder="Enter City Name">
+        <input type="submit" value="Submit" id="button-submit">
+    </div>
+    <div class="display">
+        <h1 id="city"></h1>
+        <p id="temp"></p>
+        <small id="desc"></small>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
