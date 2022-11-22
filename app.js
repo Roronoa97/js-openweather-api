@@ -1,4 +1,4 @@
-import { APP_ID } from "./env.js";
+import { ENV } from "./env.js";
 
 let button = document.getElementById('button-submit');
 let input = document.getElementById('input-value');
@@ -8,7 +8,7 @@ let desc = document.getElementById('desc');
 
 button.addEventListener('click', () => {
     //using Fetch()
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=metric&appid='+APP_ID)
+    fetch(ENV.APP_URL+'?q='+input.value+'&units=metric&appid='+ENV.APP_ID)
     .then(response => {
         return response.json();
     })
