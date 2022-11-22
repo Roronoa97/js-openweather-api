@@ -1,3 +1,5 @@
+import { APP_ID } from "./env.js";
+
 let button = document.getElementById('button-submit');
 let input = document.getElementById('input-value');
 let city = document.getElementById('city');
@@ -6,7 +8,7 @@ let desc = document.getElementById('desc');
 
 button.addEventListener('click', () => {
     //using Fetch()
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=metric&appid=b1cbf3680482100c8c1c07aef944a950')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=metric&appid='+APP_ID)
     .then(response => {
         return response.json();
     })
